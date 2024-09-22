@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Donate Foundation</title>
+   <!-- Font Link -->
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap" rel="stylesheet">
+   <!-- Font Awesome Link -->
+   <script src="https://kit.fontawesome.com/d709f1b460.js" crossorigin="anonymous"></script>
+   <!-- Daisy UI link -->
+   <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
+   <script src="https://cdn.tailwindcss.com"></script>
+   <script>
+       tailwind.config = {
+           theme: {
+               extend: {
+                   colors: {
+                       'primary': 'rgb(17, 17, 17)',
+                       'secondary': 'rgba(17, 17, 17, 0.7)',
+                       'tertiary': 'rgba(17, 17, 17, 0.05)',
+                       'border-color': 'rgba(17, 17, 17, 0.1)',
+                       'input-color': 'rgba(17, 17, 17, 0.4)',
+                       'light-green': 'rgb(180, 244, 97)',
+                       'deep-white': 'rgb(249, 247, 243)'
+                   },
+                   fontFamily: {
+                       'lexend' : '"Lexend", sans-serif',
+                   },
+                   width: {
+                       'custom': '1140px',
+                   },
+               },
+           },
+       }
+   </script>
+</head>
+<body class="font-lexend">
+    <header class="py-6 bg-deep-white shadow-sm">
+        <nav class="w-custom mx-auto flex justify-between items-center">
+            <button class="bg-light-green py-4 px-8 rounded-lg text-xl font-semibold">Home</button>
+            <p class="flex items-center gap-3">
+                <img class="border-2 border-dashed" src="./assets/logo.png" alt="Logo">
+                <span class="text-xl font-semibold">Donate Foundation</span>
+            </p>
+            <p class="flex items-center gap-3 text-secondary">
+                <img class="border-2 border-dashed" src="./assets/coin.png" alt="Coin">
+                <span class="text-xl font-medium">5500</span>
+                <span class="text-xl font-medium">BDT</span>
+            </p>
+        </nav>
+    </header>
+    <!-- FAQ Section -->
+   <section class="w-custom mx-auto my-20">
+        <h1 class="flex text-4xl font-bold"><span>Important FAQ </span> &nbsp; <span ><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M9.879 7.519c1.171-1.025 3.071-1.025 4.242 0 1.172 1.025 1.172 2.687 0 3.712-.203.179-.43.326-.67.442-.745.361-1.45.999-1.45 1.827v.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Zm-9 5.25h.008v.008H12v-.008Z" />
+          </svg>
+          </span>
+        </h1>
+        <div class="my-12 space-y-6">
+            <div class="collapse collapse-arrow bg-base-200">
+                <input type="radio" name="my-accordion-2" checked="checked" />
+                <div class="collapse-title text-xl font-medium">A. What is the Document Object Model (DOM)?</div>
+                <div class="collapse-content">
+                  <div>
+                    <p>
+                        The Document Object Model (DOM) is a programming interface for web documents. It represents the structure of a webpage as a tree of objects, where each part of the document (like HTML elements) becomes an object that you can interact with.
+                    </p>
+                    <br>
+                    <p>Here's an easy way to understand it:</p>
+                    <br>
+                    <ul>
+                        <li><b>Structure:</b> Think of your webpage as a tree. The root is the html tag, and the branches are tags like head, body, div, etc. Each tag is a "node" in this tree.</li>
+                        <li><b>Access:</b> Using JavaScript, you can access and manipulate any part of this tree. You can add, remove, or change elements, attributes, and content. For example, you can change the text of a paragraph or make a button do something when clicked</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="collapse collapse-arrow bg-base-200">
+                <input type="radio" name="my-accordion-2" />
+                <div class="collapse-title text-xl font-medium">B. How do you select an element from the DOM?</div>
+                <div class="collapse-content">
+                  <div>
+                    <p>Here’s a simple theoretical explanation of how to select elements from the DOM using JavaScript:</p><br>
+                    <ol>
+                        <li><b>By ID: </b>Use getElementById() to select a single element by its unique id attribute. Only one element can have a specific id on a page.</li><br>
+                        <li><b>By Class: </b>Use getElementsByClassName() to select elements by their class attribute. This returns a collection of all elements that share that class.</li><br>
+                        <li><b>By Tag Name: </b>Use getElementsByTagName() to select elements based on their tag (like div, p, h1). This also returns a collection of elements with that tag.</li><br>
+                        <li>
+                            <b>By Class Selector: </b>
+                            <ul>
+                                <li>- Use querySelector() to select the first element that matches a CSS selector (like #id, .class, or tag).</li>
+                                <li>- Use querySelectorAll() to select all elements that match a CSS selector, returning a collection.</li>
+                            </ul>
+                        </li>
+                    </ol><br>
+                    <p>These methods allow you to easily target and interact with specific parts of your webpage.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="collapse collapse-arrow bg-base-200">
+                <input type="radio" name="my-accordion-2" />
+                <div class="collapse-title text-xl font-medium">C. What is event delegation in the context of the DOM, and why is it useful?</div>
+                <div class="collapse-content">
+                  <div>
+                    <p>
+                        Event delegation is a technique in the DOM where a single event listener is attached to a parent element to manage events triggered by its child elements. Instead of attaching separate event listeners to each child element, you place one on the parent and rely on the event "bubbling" up from the child to the parent.
+                    </p>
+                    <br>
+                    <h4 class="text-xl font-bold">How it works:</h4><br>
+                    <p>
+                        1. <b>Event Bubbling: </b> When an event occurs on a child element, it "bubbles up" through its ancestors, meaning the event is first handled by the child, then by its parent, and so on up to the root of the DOM tree.
+                    </p>
+                    <p>
+                        2. <b>Parent Handling: </b> The parent element can use this bubbling to detect events happening on its child elements, even if the child elements are added or changed later.
+                    </p>
+                    <br>
+                    <h4 class="text-xl font-bold">HWhy it's useful:</h4><br>
+                    <p>
+                        1. <b>Efficiency: </b> Instead of adding event listeners to many elements, you only need to attach one to the parent. This reduces memory usage and improves performance.
+                    </p>
+                    <p>
+                        2. <b>Dynamic Content: </b>  It allows you to handle events for dynamically added elements without needing to add event listeners manually for each new child. This is especially useful in cases where elements are added, removed, or modified after the initial page load.
+                    </p>
+                    <br>
+                    <p>Event delegation simplifies event handling and improves scalability in dynamic applications.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="collapse collapse-arrow bg-base-200">
+                <input type="radio" name="my-accordion-2" />
+                <div class="collapse-title text-xl font-medium">D. How do you manipulate an element's attributes and styles using the DOM?</div>
+                <div class="collapse-content">
+                  <div>
+                    <p>In the DOM, you can manipulate an element's attributes and styles directly using JavaScript. Here's a breakdown:</p>
+                    <br>
+                    <h3>1. Manipulating Attributes:</h3><br>
+                    <p>
+                        <b>Get an Attribute</b> You can retrieve the value of an attribute (like src, href, id, etc.) using methods like getAttribute().
+                    </p>
+                    <p>
+                        <b>Set an Attribute: </b> You can modify or add a new attribute using setAttribute(), which allows you to dynamically change values like class, src, etc.
+                    </p>
+                    <p>
+                        <b>Remove an Attribute: </b>If you want to delete an attribute, you can use removeAttribute().
+                    </p>
+                    <br><br>
+                    <h3>1. Manipulating Styles:</h3><br>
+                    <p>
+                        <b>Inline Styles</b> You can directly modify the style property of an element to change its appearance (e.g., setting color, background, margin, etc.). This affects the inline styles, which are styles applied directly on the element through HTML.
+                    </p>
+                    <p>
+                        <b>CSS Class Manipulation: </b>  You can add, remove, or toggle CSS classes using methods like classList.add(), classList.remove(), or classList.toggle(). This allows you to control an element's styles by applying predefined CSS classes.
+                    </p>
+                    <br><br>
+                    <p>These methods let you dynamically adjust an element's attributes and styles, making your webpage more interactive and responsive to user actions.</p>
+                  </div>
+                </div>
+              </div>
+        </div>
+   </section>
+</body>
+</html>
