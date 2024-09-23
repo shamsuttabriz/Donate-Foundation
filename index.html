@@ -39,38 +39,52 @@
  </head>
  <body class="font-lexend">
     <header class="pb-6 bg-deep-white/20 sticky top-0 z-50 backdrop-filter backdrop-blur-[20px] shadow-sm">
-        <nav class="bg-deep-white z-0 py-8">
-            <div class="w-custom mx-auto flex justify-between items-center">
-                <button id="btn-blog" class="bg-light-green w-28 py-4 px-8 rounded-lg text-xl font-semibold">Blog</button>
-            <p class="flex items-center gap-3">
-                <img class="border-2 border-dashed" src="./assets/logo.png" alt="Logo">
-                <span class="text-xl font-semibold">Donate Foundation</span>
-            </p>
-            <p class="flex items-center gap-3 text-secondary">
-                <img class="border-2 border-dashed" src="./assets/coin.png" alt="Coin">
-                <span id="balance" class="text-xl font-medium">5500</span>
-                <span class="text-xl font-medium">BDT</span>
-            </p>
+        <nav class="bg-deep-white z-0 py-8 px-6 lg:px-0">
+            <div class="container lg:w-custom mx-auto flex justify-between items-center">
+                <button id="btn-blog" class="bg-light-green lg:w-28 py-2 lg:py-4 px-5 lg:px-8 rounded-lg text-md lg:text-xl font-semibold">Blog</button>
+                <p class="flex flex-col lg:flex-row items-center gap-2 lg:gap-3">
+                    <img class="w-8 lg:w-auto border-2 border-dashed" src="./assets/logo.png" alt="Logo">
+                    <span class="text-md lg:text-xl font-semibold">Donate Foundation</span>
+                </p>
+                <p class="flex flex-col lg:flex-row  items-center gap-2 lg:gap-3 text-secondary">
+                    <img class="border-2 border-dashed" src="./assets/coin.png" alt="Coin">
+                    <span id="balance" class="text-md lg:text-xl font-medium">5500</span>
+                    <span class="text-md lg:text-xl font-medium">BDT</span>
+                </p>
             </div>
         </nav>
         <!-- Toggle Button -->
         <div class="flex justify-center gap-4 mt-10">
-            <button id="btn-donation" class="bg-light-green py-4 px-8 rounded-lg text-xl font-semibold">Donation</button>
+            <button id="btn-donation" class="bg-light-green py-4 px-8 rounded-lg text-xl font-semibold border-2 border-border-color">Donation</button>
             <button id="btn-history" class="bg-white py-4 px-8 rounded-lg text-xl font-semibold border-2 border-border-color">History</button>
         </div>
     </header>
+    <!-- Modal Section -->
+    <dialog id="my_modal_1" class="modal">
+        <div class="modal-box text-center">
+            <h1 class="text-4xl font-bold text-primary py-4">Congrats!</h1>
+            <img class="mx-auto" src="./assets/coin.png" alt="Coin">
+            <p class="py-4 text-light text-secondary">You Have Donate for Humankind</p>
+            <h2 class="pb-4 text-2xl font-bold text-primary">Successfully</h2>
+            <div class="modal-action">
+                <form method="dialog" class="mx-auto">
+                    <button class="btn">Close Information</button>
+                </form>
+            </div>
+        </div>
+    </dialog>
     <!-- Donation Section -->
-    <section id="show-donation" class="w-custom mx-auto pb-20 pt-8">
+    <section id="show-donation" class="container lg:w-custom mx-auto px-4 lg:px-0 pb-20 pt-8">
         <!-- Donate Noakhali - Bangladesh -->
-        <div class="flex justify-between items-center gap-8 border-2 border-border-color p-8 rounded-2xl my-8">
-            <img class="flex-1" src="./assets/noakhali.png" alt="Noakhali">
-            <div class="flex-1">
+        <div class="flex flex-col lg:flex-row justify-between items-center gap-8 border-2 border-border-color p-8 rounded-2xl my-8">
+            <img class="w-full lg:flex-1" src="./assets/noakhali.png" alt="Noakhali">
+            <div class="w-full lg:flex-1">
                 <p class="inline-block bg-tertiary text-secondary px-4 py-2 rounded-lg">
                     <img class="inline" src="./assets/coin.png" alt="Coin">
                     <span id="balance-noakhali" class="text-base font-medium">0</span>
                     <span class="text-base font-medium">BDT</span>
                 </p>
-                <h3 class="text-primary text-xl font-bold my-4">Donate for Flood at Noakhali, Bangladesh</h3>
+                <h3 class="text-primary lg:text-xl font-bold my-4">Donate for Flood at Noakhali, Bangladesh</h3>
                 <p class="text-secondary text-base font-light leading-6 mb-6">
                     The recent floods in Noakhali have caused significant damage to homes  infrastructure. Your donation will help provide essential supplies and  to those affected by this disaster. Every contribution, big or small, makes  difference. Please join us in supporting the relief efforts and making a positive impact on the lives of those in need.
                 </p>
@@ -80,7 +94,7 @@
         </div>
 
         <!-- Donate Feni - Bangladesh -->
-        <div class="flex justify-between items-center gap-8 border-2 border-border-color p-8 rounded-2xl my-8">
+        <div class="flex flex-col lg:flex-row justify-between items-center gap-8 border-2 border-border-color p-8 rounded-2xl my-8">
             <img class="flex-1" src="./assets/feni.png" alt="Feni">
             <div class="flex-1">
                 <p class="inline-block bg-tertiary text-secondary px-4 py-2 rounded-lg">
@@ -88,7 +102,7 @@
                     <span id="balance-feni" class="text-base font-medium">600</span>
                     <span class="text-base font-medium">BDT</span>
                 </p>
-                <h3 class="text-primary text-xl font-bold my-4">Aid for Injured in the Quota Movement</h3>
+                <h3 class="text-primary text-xl font-bold my-4">Donate for Flood Relief in Feni,Bangladesh</h3>
                 <p class="text-secondary text-base font-light leading-6 mb-6">
                     The recent floods in Noakhali have caused significant damage to homes  infrastructure. Your donation will help provide essential supplies and  to those affected by this disaster. Every contribution, big or small, makes  difference. Please join us in supporting the relief efforts and making a positive impact on the lives of those in need.
                 </p>
@@ -98,7 +112,7 @@
         </div>
 
         <!-- Donate Injured Quota Movement - Bangladesh -->
-        <div class="flex justify-between items-center gap-8 border-2 border-border-color p-8 rounded-2xl my-8">
+        <div class="flex flex-col lg:flex-row justify-between items-center gap-8 border-2 border-border-color p-8 rounded-2xl my-8">
             <img class="flex-1" src="./assets/quota-protest.png" alt="Noakhali">
             <div class="flex-1">
                 <p class="inline-block bg-tertiary text-secondary px-4 py-2 rounded-lg">
@@ -118,8 +132,9 @@
 
     <!-- History Section -->
     <section id="show-history" class="hidden w-custom mx-auto mt-4">
-        <h1 class="text-3xl font-bold text-center my-12">Welcome To History Pages</h1>
     </section>
+
+    <footer class="bg-deep-white py-12"> </footer>
 
     <!-- Script Files -->
     <script src="./js/utilities.js"></script>

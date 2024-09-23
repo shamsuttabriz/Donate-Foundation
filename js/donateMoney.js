@@ -4,9 +4,11 @@ document.getElementById('btn-donate-noakhali').addEventListener('click', functio
     const balance = getTextFieldValueById("balance");
     const balanceNoakhali = getTextFieldValueById('balance-noakhali');
 
-    if (isNaN(donateNoakhali)) {
+    if (isNaN(donateNoakhali) || donateNoakhali < 0) {
         alert("Please give correct input value");
         return;
+    } else {
+        my_modal_1.showModal();
     }
 
     const newBalance = balance + donateNoakhali;
@@ -21,7 +23,7 @@ document.getElementById('btn-donate-noakhali').addEventListener('click', functio
     div.classList.add('p-5');
     div.innerHTML = `
          <h4 class="text-xl font-bold text-black py-2">
-             <span>${donateNoakhali}</span> Taka is Donated for famine-2024 at Feni, Bangladesh 
+             <span>${donateNoakhali}</span> Taka is Donate for Flood at Noakhali, Bangladesh 
          </h4>
          <p class="font-light text-sm text-gray-500">Time</p>
      `;
@@ -37,9 +39,11 @@ document.getElementById('btn-donate-feni').addEventListener('click', function ()
     const balance = getTextFieldValueById("balance");
     const balanceFeni = getTextFieldValueById('balance-feni');
 
-    if (isNaN(donateFeni)) {
+    if (isNaN(donateFeni) || donateFeni < 0) {
         alert("Please give correct input value");
         return;
+    } else {
+        my_modal_1.showModal();
     }
 
     const newBalance = balance + donateFeni;
@@ -54,7 +58,7 @@ document.getElementById('btn-donate-feni').addEventListener('click', function ()
     div.classList.add('p-5');
     div.innerHTML = `
          <h4 class="text-xl font-bold text-black py-2">
-             <span>${donateFeni}</span> Taka is Donated for famine-2024 at Feni, Bangladesh 
+             <span>${donateFeni}</span> Taka is Donate for Flood at Noakhali, Bangladesh 
          </h4>
          <p class="font-light text-sm text-gray-500">Time</p>
      `;
@@ -70,9 +74,11 @@ document.getElementById('btn-donate-quota').addEventListener('click', function (
     const balance = getTextFieldValueById("balance");
     const balanceQuota = getTextFieldValueById('balance-quota');
 
-    if (isNaN(donateQuota)) {
+    if (isNaN(donateQuota) || donateQuota < 0) {
         alert("Please give correct input value");
         return;
+    } else {
+        my_modal_1.showModal();
     }
 
     const newBalance = balance + donateQuota;
@@ -87,7 +93,7 @@ document.getElementById('btn-donate-quota').addEventListener('click', function (
     div.classList.add('p-5');
     div.innerHTML = `
          <h4 class="text-xl font-bold text-black py-2">
-             <span>${donateQuota}</span> Taka is Donated for famine-2024 at Feni, Bangladesh 
+             <span>${donateQuota}</span> Taka is Aid for Injured in the Quota Movement 
          </h4>
          <p class="font-light text-sm text-gray-500">Time</p>
      `;
