@@ -1,10 +1,11 @@
+const time = new Date();
+
 // Noakhali Donation of Bangladesh
 document.getElementById('btn-donate-noakhali').addEventListener('click', function () {
     const donateNoakhali = getInputValueById('take-donate-noakhali');
     const balance = getTextFieldValueById("balance");
     const balanceNoakhali = getTextFieldValueById('balance-noakhali');
 
-    const time = new Date();
 
     if (isNaN(donateNoakhali) || donateNoakhali < 0) {
         alert("Please give correct input value");
@@ -60,7 +61,7 @@ document.getElementById('btn-donate-feni').addEventListener('click', function ()
     div.classList.add('p-5');
     div.innerHTML = `
          <h4 class="text-xl font-bold text-black py-2">
-             <span>${donateFeni}</span> Taka is Donate for Flood at Noakhali, Bangladesh 
+             <span>${donateFeni}</span> Taka is Donate for Flood Relief in Feni,Bangladesh
          </h4>
          <p class="font-light text-sm text-gray-500">${time}</p>
      `;
