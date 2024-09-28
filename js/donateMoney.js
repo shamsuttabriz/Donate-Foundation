@@ -4,6 +4,8 @@ document.getElementById('btn-donate-noakhali').addEventListener('click', functio
     const balance = getTextFieldValueById("balance");
     const balanceNoakhali = getTextFieldValueById('balance-noakhali');
 
+    const time = new Date();
+
     if (isNaN(donateNoakhali) || donateNoakhali < 0) {
         alert("Please give correct input value");
         return;
@@ -25,7 +27,7 @@ document.getElementById('btn-donate-noakhali').addEventListener('click', functio
          <h4 class="text-xl font-bold text-black py-2">
              <span>${donateNoakhali}</span> Taka is Donate for Flood at Noakhali, Bangladesh 
          </h4>
-         <p class="font-light text-sm text-gray-500">Time</p>
+         <p class="font-light text-sm text-gray-500">${time}</p>
      `;
     document.getElementById('show-history').appendChild(div);
 
@@ -60,7 +62,7 @@ document.getElementById('btn-donate-feni').addEventListener('click', function ()
          <h4 class="text-xl font-bold text-black py-2">
              <span>${donateFeni}</span> Taka is Donate for Flood at Noakhali, Bangladesh 
          </h4>
-         <p class="font-light text-sm text-gray-500">Time</p>
+         <p class="font-light text-sm text-gray-500">${time}</p>
      `;
     document.getElementById('show-history').appendChild(div);
 
@@ -95,7 +97,7 @@ document.getElementById('btn-donate-quota').addEventListener('click', function (
          <h4 class="text-xl font-bold text-black py-2">
              <span>${donateQuota}</span> Taka is Aid for Injured in the Quota Movement 
          </h4>
-         <p class="font-light text-sm text-gray-500">Time</p>
+         <p class="font-light text-sm text-gray-500">${time}</p>
      `;
     document.getElementById('show-history').appendChild(div);
 
