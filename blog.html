@@ -38,17 +38,23 @@
    </script>
 </head>
 <body class="font-lexend">
-    <header class="w-full bg-deep-white z-50 sticky top-0">
-        <nav class="w-custom mx-auto flex justify-between items-center py-8">
-            <button id="btn-home" class="bg-light-green w-28 py-4 px-8 rounded-lg text-xl font-semibold">Home</button>
-            <p class="flex items-center gap-3">
-                <img class="border-2 border-dashed" src="./assets/logo.png" alt="Logo">
-                <span class="text-xl font-semibold">Donate Foundation</span>
+    <header class="w-full bg-deep-white z-50 sticky top-0 px-4 lg:px-0">
+        <nav class="container lg:w-custom mx-auto flex justify-between items-center py-8 relative">
+            <span id="btn-blog-menu" class="block lg:hidden cursor-pointer">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 5.25h16.5m-16.5 4.5h16.5m-16.5 4.5h16.5m-16.5 4.5h16.5" />
+                </svg>                  
+            </span>
+            <button id="btn-home" class="bg-light-green w-28 py-4 px-8 rounded-lg text-xl font-semibold hidden lg:block">Home</button>
+            <button id="btn-home-sm" class="bg-gray-300 w-44 py-4 px-8 rounded-lg text-md font-semibold absolute hidden top-20">Home</button>
+            <p class="flex flex-col lg:flex-row items-center gap-2 lg:gap-3">
+                <img class="w-8 lg:w-auto border-2 border-dashed" src="./assets/logo.png" alt="Logo">
+                <span class="text-md lg:text-xl font-semibold">Donate Foundation</span>
             </p>
-            <p class="flex items-center gap-3 text-secondary">
-                <img class="border-2 border-dashed" src="./assets/coin.png" alt="Coin">
-                <span class="text-xl font-medium">5500</span>
-                <span class="text-xl font-medium">BDT</span>
+            <p class="flex items-center gap-2 lg:gap-3 text-secondary">
+                <img class="w-6 lg:w-full border-2 border-dashed" src="./assets/coin.png" alt="Coin">
+                <span class="text-md lg:text-xl font-medium">5500</span>
+                <span class="text-md lg:text-xl font-medium">BDT</span>
             </p>
         </nav>
     </header>
@@ -166,5 +172,6 @@
 
    <!-- Script Files -->
    <script src="js/togglePage.js"></script>
+   <script src="js/utilities.js"></script>
 </body>
 </html>

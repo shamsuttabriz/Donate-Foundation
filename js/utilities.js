@@ -16,3 +16,12 @@ function showSectionById(id) {
     // SHOW TO INDIVIDUAL SECTOIN
     document.getElementById(id).classList.remove('hidden');
 }
+
+// Responsive Navbar
+document.getElementById('btn-home-menu')?.addEventListener('click', function () {
+    document.getElementById('btn-blog-sm').classList.remove('hidden');
+})
+
+document.getElementById('btn-blog-menu')?.addEventListener('click', function () {
+    document.getElementById('btn-home-sm').classList.remove('hidden');
+})

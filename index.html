@@ -39,15 +39,21 @@
  </head>
  <body class="font-lexend">
     <header class="pb-6 bg-deep-white/20 sticky top-0 z-50 backdrop-filter backdrop-blur-[20px] shadow-sm">
-        <nav class="bg-deep-white z-0 py-8 px-6 lg:px-0">
+        <nav class="bg-deep-white z-0 py-8 px-4 lg:px-0">
             <div class="container lg:w-custom mx-auto flex justify-between items-center">
-                <button id="btn-blog" class="bg-light-green lg:w-28 py-2 lg:py-4 px-5 lg:px-8 rounded-lg text-md lg:text-xl font-semibold">Blog</button>
+                <span id="btn-home-menu" class="block lg:hidden cursor-pointer">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 5.25h16.5m-16.5 4.5h16.5m-16.5 4.5h16.5m-16.5 4.5h16.5" />
+                    </svg>                  
+                </span>
+                <button id="btn-blog" class="bg-light-green lg:w-28 py-2 lg:py-4 px-5 lg:px-8 rounded-lg text-md lg:text-xl font-semibold hidden lg:block">Blog</button>
+                <button id="btn-blog-sm" class="bg-gray-300 w-44 py-4 px-8 rounded-lg text-md font-semibold absolute hidden top-20">Blog</button>
                 <p class="flex flex-col lg:flex-row items-center gap-2 lg:gap-3">
                     <img class="w-8 lg:w-auto border-2 border-dashed" src="./assets/logo.png" alt="Logo">
                     <span class="text-md lg:text-xl font-semibold">Donate Foundation</span>
                 </p>
-                <p class="flex flex-col lg:flex-row  items-center gap-2 lg:gap-3 text-secondary">
-                    <img class="border-2 border-dashed" src="./assets/coin.png" alt="Coin">
+                <p class="flex items-center gap-2 lg:gap-3 text-secondary">
+                    <img class="w-6 lg:w-full border-2 border-dashed" src="./assets/coin.png" alt="Coin">
                     <span id="balance" class="text-md lg:text-xl font-medium">5500</span>
                     <span class="text-md lg:text-xl font-medium">BDT</span>
                 </p>
@@ -55,12 +61,12 @@
         </nav>
         <!-- Toggle Button -->
         <div class="flex justify-center gap-4 mt-10">
-            <button id="btn-donation" class="bg-light-green py-4 px-8 rounded-lg text-xl font-semibold border-2 border-border-color">Donation</button>
-            <button id="btn-history" class="bg-white py-4 px-8 rounded-lg text-xl font-semibold border-2 border-border-color">History</button>
+            <button id="btn-donation" class="bg-light-green py-2 lg:py-4 px-6 lg:px-8 rounded-lg text-md lg:text-xl font-semibold border-2 border-border-color">Donation</button>
+            <button id="btn-history" class="bg-white py-2 lg:py-4 px-6 lg:px-8 rounded-lg text-md lg:text-xl font-semibold border-2 border-border-color">History</button>
         </div>
     </header>
     <!-- Modal Section -->
-    <dialog id="my_modal_1" class="modal">
+    <dialog id="my_modal_1" class="modal mx-auto">
         <div class="modal-box text-center">
             <h1 class="text-4xl font-bold text-primary py-4">Congrats!</h1>
             <img class="mx-auto" src="./assets/coin.png" alt="Coin">
@@ -131,7 +137,7 @@
     </section>
 
     <!-- History Section -->
-    <section id="show-history" class="hidden w-custom mx-auto mt-4">
+    <section id="show-history" class="hidden container lg:w-custom mx-auto mt-4 px-4">
     </section>
 
     <footer class="bg-deep-white py-12"> </footer>
